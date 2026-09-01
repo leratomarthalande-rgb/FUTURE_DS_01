@@ -53,9 +53,7 @@ The dataset contained approximately **5,000 orders** and generated approximately
 
 # Data Quality Assessment & Preparation
 
-Before performing any analysis, the dataset was inspected in **MySQL Workbench** to determine whether the data was suitable for analysis.
-
-Unlike many datasets used for portfolio projects, the Superstore dataset was generally well structured. The assessment found:
+Before performing any analysis, the dataset was inspected in **MySQL Workbench** to determine whether the data was suitable for analysis. The Superstore dataset was generally well structured. The assessment found:
 
 * No significant missing values or `NULL` values requiring imputation
 * One duplicate record, which was identified and removed
@@ -74,51 +72,13 @@ This stage demonstrated an important part of the analytical process: **data shou
 
 # SQL Data Preparation & Analysis
 
-MySQL Workbench was used as the primary environment for data validation, preparation and analysis.
+MySQL Workbench was used to assess, clean, validate and analyse the dataset before developing the Power BI dashboard.
 
-The following SQL functionality was applied throughout the project:
+The SQL analysis and preparation used a range of SQL commands and functions, including:
 
-### `SELECT`
+SELECT · WHERE · DISTINCT · DELETE · ALTER · CASE · GROUP BY · ORDER BY · SUM()
 
-Used to retrieve and inspect records from the dataset and examine the structure and values before analysis.
-
-### `WHERE`
-
-Used to filter records and investigate specific conditions within the dataset.
-
-### `DISTINCT`
-
-Used to examine unique values within fields and assess the consistency of categorical information.
-
-### `DELETE`
-
-Used to remove the identified duplicate record after confirming that it was a duplicate.
-
-### `ALTER`
-
-Used during data preparation to modify the structure/data type of fields, including preparing the date field for analysis.
-
-### `CASE`
-
-Used to apply conditional logic when transforming or categorising data for analysis.
-
-### `GROUP BY`
-
-Used to aggregate results by dimensions such as:
-
-* Category
-* Sub-Category
-* Region
-* Product
-* Time periods
-
-### `ORDER BY`
-
-Used to rank and sort analytical results, including identifying the highest-performing products and categories.
-
-### `SUM()`
-
-Used extensively to calculate aggregated sales and profit values across products, categories, sub-categories and regions.
+These were used across the data preparation, validation and analysis stages to remove the identified duplicate, prepare the date field, verify data consistency and generate aggregated sales and profit results by product, category, sub-category, region and time period.
 
 Together, these SQL operations were used to move from **record-level transactional data to business-level insights**.
 
@@ -284,11 +244,11 @@ For example, the overall Furniture category performs reasonably well in terms of
 
 This creates an opportunity to shift attention from simply asking:
 
-> “What sells the most?”
+ “What sells the most?”
 
 to:
 
-> “What generates the most valuable sales?”
+ “What generates the most valuable sales?”
 
 ---
 
